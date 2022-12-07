@@ -2,4 +2,4 @@ GET http://localhost:3000/v1/user/userDetail
 
 
 ###
-GET http://localhost:3000/v11
+GET http://localhost:3000/v1
