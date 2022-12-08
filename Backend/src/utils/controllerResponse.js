@@ -1,4 +1,4 @@
-let successResponse = function (response, code, result) {
+const successResponse = function (response, code, result) {
   if (result === null) {
     return response.sendStatus(code);
   } else {
@@ -9,6 +9,13 @@ let successResponse = function (response, code, result) {
   }
 };
 
+const errorResponse = function (response, code) {
+  return response.status(code).json({
+    statusCode: code,
+  });
+};
+
 module.exports = {
   successResponse,
+  errorResponse,
 };
