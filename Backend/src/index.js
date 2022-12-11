@@ -24,8 +24,7 @@ app.options("*", cors());
 //   autoIndex: true,
 //   useCreateIndex: true,
 // };
-const mongoDB =
-  "mongodb+srv://unknown:12345@sandbox.1nsjpu6.mongodb.net/ecommerce";
+const mongoDB = ;
 
 mongoose.connect(mongoDB);
 
