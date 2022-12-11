@@ -10,7 +10,7 @@ const successResponse = function (response, code, result) {
 };
 
 const errorResponse = function (response, code) {
-  return response.status(code).json({
+  return response.sendStatus(code).json({
     statusCode: code,
   });
 };

@@ -1,12 +1,13 @@
 // const model = require("model");
 const axios = require("axios");
 const CryptoJS = require("crypto-js");
-const { model } = require("mongoose");
-const { httpConstant, httpCode } = require("../utils/httpConstant");
+const { httpCode } = require("../utils/httpConstant");
 const { successResponse } = require("../utils/controllerResponse");
+const { createObject, getUserObject } = require("./queryManager");
+const model = require("../models/userModel");
 // const SECRET_KEY = process.env.En
 
-const getUserProfile = async function (requset, response) {
+const setUser = async function (requset, response) {
   try {
     console.log("Wel Come");
     // let data =await model.find("1")
@@ -18,6 +19,16 @@ const getUserProfile = async function (requset, response) {
   }
 };
 
+const createUser = async function (req, res) {
+  return createObject(model, req, res);
+};
+
+const getUser = async (req, res) => {
+  console.log("function 1");
+  return getUserObject(model, req, res);
+};
 module.exports = {
-  getUserProfile,
+  setUser,
+  getUser,
+  createUser,
 };

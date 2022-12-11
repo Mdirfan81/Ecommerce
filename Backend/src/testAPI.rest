@@ -3,3 +3,12 @@ GET http://localhost:3000/v1/user/userDetail
 
 ###
 GET http://localhost:3000/v1
+
+
+###
+POST  http://localhost:3000/v1/user/createUser
+Content-Type: application/json
+
+
+###
+GET http://localhost:3000/v1/user/id:1
